@@ -1,25 +1,27 @@
 let datos = null;
-let preguntasTest = null;
+let preguntasBanco = null;
 let preguntaActual = null;
 let actividad2Correctos = [];
+let ultimaPreguntaTestId = null;
+let ultimaPreguntaVFId = null;
 
 fetch("data/farmacologia.json")
   .then(response => response.json())
   .then(data => {
     datos = data;
-    console.log("JSON cargado correctamente");
+    console.log("farmacologia.json cargado correctamente");
     console.log(datos);
   })
   .catch(error => {
-    console.error("Error cargando el JSON:", error);
+    console.error("Error cargando farmacologia.json:", error);
   });
 
 fetch("data/preguntas.json")
   .then(response => response.json())
   .then(data => {
-    preguntasTest = data;
-    console.log("Preguntas cargadas correctamente");
-    console.log(preguntasTest);
+    preguntasBanco = data;
+    console.log("preguntas.json cargado correctamente");
+    console.log(preguntasBanco);
   })
   .catch(error => {
     console.error("Error cargando preguntas.json:", error);
@@ -33,7 +35,6 @@ function mezclarArray(array) {
   }
   return copia;
 }
-
 /* =========================
    ACTIVIDAD 1
 ========================= */
