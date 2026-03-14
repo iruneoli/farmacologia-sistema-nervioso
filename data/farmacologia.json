@@ -1,3 +1,614 @@
 {
-  "subgrupos": []
+  "subgrupos": [
+    {
+      "nombre": "Anestésicos generales",
+      "definicion": "Bloquean la sensibilidad al dolor produciendo pérdida de consciencia, pérdida de reflejos y relajación profunda.",
+      "grupos_quimicos": [
+        {
+          "nombre": "Inhalatorios",
+          "definicion": "",
+          "actividad": "Por vía respiratoria",
+          "efectos_adversos": [
+            "Riesgos cardiacos",
+            "Depresión del SNC",
+            "Hepatotoxicidad"
+          ],
+          "farmacos": [
+            {
+              "principio_activo": "Óxido nitroso",
+              "ef": ""
+            },
+            {
+              "principio_activo": "Halotano",
+              "ef": ""
+            },
+            {
+              "principio_activo": "Isofluorano",
+              "ef": ""
+            },
+            {
+              "principio_activo": "Enfluorano",
+              "ef": ""
+            }
+          ]
+        },
+        {
+          "nombre": "Barbitúricos",
+          "definicion": "",
+          "actividad": "Produce pérdida de consciencia pero no es analgésico ni relajante",
+          "efectos_adversos": [
+            "Riesgos cardiacos",
+            "Depresión del SNC"
+          ],
+          "farmacos": [
+            {
+              "principio_activo": "Tiopental",
+              "ef": "PENTHOTAL"
+            }
+          ]
+        },
+        {
+          "nombre": "Benzodiazepinas",
+          "definicion": "",
+          "actividad": "Sedación anestésica",
+          "efectos_adversos": [
+            "Riesgos cardiacos",
+            "Depresión del SNC"
+          ],
+          "farmacos": [
+            {
+              "principio_activo": "Midazolam",
+              "ef": "DORMICUM"
+            }
+          ]
+        },
+        {
+          "nombre": "Neuroleptoanalgesia",
+          "definicion": "",
+          "actividad": "Asociación analgésico-neuroléptico",
+          "efectos_adversos": [
+            "Riesgos cardiacos",
+            "Depresión del SNC"
+          ],
+          "farmacos": [
+            {
+              "principio_activo": "Fentanilo + Haloperidol",
+              "ef": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Anticonvulsionantes y antiepilépticos",
+      "definicion": "Tratamiento de los movimientos espasmódicos continuados producidos por la hiperactividad nerviosa de una zona del encéfalo.",
+      "grupos_quimicos": [
+        {
+          "nombre": "Para crisis de ausencia",
+          "definicion": "",
+          "actividad": "Antiepiléptico",
+          "efectos_adversos": [],
+          "farmacos": [
+            {
+              "principio_activo": "Valproato sódico",
+              "ef": "DEPAKINE"
+            }
+          ]
+        },
+        {
+          "nombre": "Barbitúricos",
+          "definicion": "",
+          "actividad": "Anticonvulsionante",
+          "efectos_adversos": [
+            "Disminuye la concentración de otros fármacos"
+          ],
+          "farmacos": [
+            {
+              "principio_activo": "Fenobarbital",
+              "ef": ""
+            }
+          ]
+        },
+        {
+          "nombre": "Analgésico en neuralgias del trigémino",
+          "definicion": "",
+          "actividad": "Anticonvulsionante",
+          "efectos_adversos": [
+            "Neurológicos"
+          ],
+          "farmacos": [
+            {
+              "principio_activo": "Carbamacepina",
+              "ef": "TEGRETOL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Antiparkinsonianos",
+      "definicion": "Tratamiento de la enfermedad degenerativa del SNC caracterizada por temblor, lentitud de movimientos y rigidez muscular.",
+      "grupos_quimicos": [
+        {
+          "nombre": "Soluciona el déficit de dopamina característico del Parkinson",
+          "definicion": "",
+          "actividad": "Antiparkinsoniano",
+          "efectos_adversos": [],
+          "farmacos": [
+            {
+              "principio_activo": "L-DOPA",
+              "ef": ""
+            },
+            {
+              "principio_activo": "Biperideno",
+              "ef": "AKINETON"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Hipnóticos, sedantes y ansiolíticos",
+      "definicion": "Inducen el sueño, relajan y calman.",
+      "grupos_quimicos": [
+        {
+          "nombre": "Benzodiazepinas de acción larga",
+          "definicion": "Crean menos dependencia",
+          "actividad": "",
+          "efectos_adversos": [
+            "Riesgo de acumulación",
+            "Sedación excesiva",
+            "Somnolencia diurna",
+            "Amnesia pasajera",
+            "Accidentes"
+          ],
+          "farmacos": [
+            {
+              "principio_activo": "Flurazepam",
+              "ef": "DORMODOR"
+            },
+            {
+              "principio_activo": "Clorazepato",
+              "ef": "TRANXILIUM"
+            },
+            {
+              "principio_activo": "Diazepam",
+              "ef": "VALIUM"
+            },
+            {
+              "principio_activo": "Bromazepam",
+              "ef": "LEXATIN"
+            },
+            {
+              "principio_activo": "Flunitrazepam",
+              "ef": "ROHIPNOL"
+            }
+          ]
+        },
+        {
+          "nombre": "Benzodiazepinas de acción corta",
+          "definicion": "No se acumulan tanto, pero crean más dependencia",
+          "actividad": "",
+          "efectos_adversos": [
+            "Dependencia",
+            "Somnolencia diurna",
+            "Amnesia pasajera"
+          ],
+          "farmacos": [
+            {
+              "principio_activo": "Alprazolam",
+              "ef": "TRANKIMAZIN"
+            },
+            {
+              "principio_activo": "Lorazepam",
+              "ef": "ORFIDAL"
+            },
+            {
+              "principio_activo": "Lormetazepam",
+              "ef": "NOCTAMED"
+            },
+            {
+              "principio_activo": "Midazolam",
+              "ef": "DORMICUM"
+            }
+          ]
+        },
+        {
+          "nombre": "Análogos",
+          "definicion": "",
+          "actividad": "",
+          "efectos_adversos": [
+            "Somnolencia diurna",
+            "Amnesia pasajera"
+          ],
+          "farmacos": [
+            {
+              "principio_activo": "Zolpidem",
+              "ef": "STILNOX"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Antidepresivos",
+      "definicion": "Aumentan la concentración de aminas neurotransmisoras. Son psicoanalépticos y aumentan la actividad del sistema nervioso.",
+      "grupos_quimicos": [
+        {
+          "nombre": "Tricíclicos",
+          "definicion": "Evitan que la neurona emisora de los neurotransmisores los recupere",
+          "actividad": "",
+          "efectos_adversos": [
+            "Sequedad de boca",
+            "Visión borrosa",
+            "Somnolencia",
+            "Riesgo de sobredosis"
+          ],
+          "farmacos": [
+            {
+              "principio_activo": "Amitriptilina",
+              "ef": "TRYPTIZOL"
+            },
+            {
+              "principio_activo": "Clomipramina",
+              "ef": "ANAFRANIL"
+            },
+            {
+              "principio_activo": "Imipramina",
+              "ef": "TOFRANIL"
+            }
+          ]
+        },
+        {
+          "nombre": "Afines (ISRS)",
+          "definicion": "Inhibidores selectivos de la recaptación de serotonina",
+          "actividad": "",
+          "efectos_adversos": [
+            "Cuadros cardiacos fatales por sobredosis",
+            "Náuseas",
+            "Vómitos"
+          ],
+          "farmacos": [
+            {
+              "principio_activo": "Fluoxetina",
+              "ef": "PROZAC"
+            },
+            {
+              "principio_activo": "Paroxetina",
+              "ef": "SEROXAT"
+            }
+          ]
+        },
+        {
+          "nombre": "Para depresión bipolar",
+          "definicion": "",
+          "actividad": "",
+          "efectos_adversos": [
+            "Estrecho margen terapéutico"
+          ],
+          "farmacos": [
+            {
+              "principio_activo": "Litio",
+              "ef": "PLENUR"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Neurolépticos",
+      "definicion": "Bloquean los receptores de dopamina y reducen la hiperactividad nerviosa. Son psicolépticos depresores del SNC.",
+      "grupos_quimicos": [
+        {
+          "nombre": "Típicos o clásicos",
+          "definicion": "",
+          "actividad": "",
+          "efectos_adversos": [
+            "Sedación",
+            "Hipotensión",
+            "Sequedad de boca",
+            "Visión borrosa",
+            "Parkinson yatrogénico",
+            "Disquinesias",
+            "Potencian la acción de otros depresores como alcohol u opiáceos"
+          ],
+          "farmacos": [
+            {
+              "principio_activo": "Clorpromacina",
+              "ef": "LARGACTIL"
+            },
+            {
+              "principio_activo": "Haloperidol",
+              "ef": ""
+            }
+          ]
+        },
+        {
+          "nombre": "Atípicos",
+          "definicion": "",
+          "actividad": "",
+          "efectos_adversos": [
+            "Sedación",
+            "Hipotensión",
+            "Sequedad de boca",
+            "Visión borrosa",
+            "Parkinson yatrogénico",
+            "Disquinesias",
+            "Potencian la acción de otros depresores como alcohol u opiáceos"
+          ],
+          "farmacos": [
+            {
+              "principio_activo": "Sulpirida",
+              "ef": "DOGMATIL"
+            },
+            {
+              "principio_activo": "Clozapina",
+              "ef": "LEPONEX"
+            },
+            {
+              "principio_activo": "Risperidona",
+              "ef": "RISPERDAL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Anestésicos locales",
+      "definicion": "Interrumpen de modo reversible la transmisión nerviosa de los estímulos dolorosos sin perder la consciencia. También pueden usarse en pomada para prurito o hemorroides y como aerosol para dolores dentales.",
+      "grupos_quimicos": [
+        {
+          "nombre": "Derivados de la cocaína",
+          "definicion": "",
+          "actividad": "Tratamiento de úlceras bucales, dolores de garganta",
+          "efectos_adversos": [
+            "Reacciones alérgicas graves",
+            "Contraindicados en enfermos cardiacos"
+          ],
+          "farmacos": [
+            {
+              "principio_activo": "Benzocaína",
+              "ef": ""
+            }
+          ]
+        },
+        {
+          "nombre": "Derivados de la cocaína",
+          "definicion": "",
+          "actividad": "Como anestésico se asocia a un vasoconstrictor (adrenalina). Antiarrítmico",
+          "efectos_adversos": [
+            "Reacciones alérgicas graves",
+            "Contraindicados en enfermos cardiacos"
+          ],
+          "farmacos": [
+            {
+              "principio_activo": "Lidocaína",
+              "ef": ""
+            }
+          ]
+        },
+        {
+          "nombre": "Derivados de la cocaína",
+          "definicion": "",
+          "actividad": "Anestésico local",
+          "efectos_adversos": [],
+          "farmacos": [
+            {
+              "principio_activo": "Bupivacaína",
+              "ef": ""
+            },
+            {
+              "principio_activo": "Mepivacaína",
+              "ef": ""
+            },
+            {
+              "principio_activo": "Procaína",
+              "ef": ""
+            },
+            {
+              "principio_activo": "Prilocaína",
+              "ef": ""
+            }
+          ]
+        },
+        {
+          "nombre": "Derivados de la cocaína",
+          "definicion": "",
+          "actividad": "Anestésico local",
+          "efectos_adversos": [
+            "Dependencia"
+          ],
+          "farmacos": [
+            {
+              "principio_activo": "Cocaína",
+              "ef": ""
+            }
+          ]
+        },
+        {
+          "nombre": "Derivados de la cocaína",
+          "definicion": "",
+          "actividad": "En aerosol para reducir el dolor causado por la aguja",
+          "efectos_adversos": [
+            "Muy tóxico"
+          ],
+          "farmacos": [
+            {
+              "principio_activo": "Tetracaína",
+              "ef": ""
+            }
+          ]
+        }
+      ],
+      "efs_asociadas": [
+        {
+          "ef": "HEMOAL",
+          "uso": "Hemorroides"
+        },
+        {
+          "ef": "DENTISPRAY",
+          "uso": "Dolor dental"
+        }
+      ]
+    },
+    {
+      "nombre": "Simpaticomiméticos",
+      "definicion": "Estimulan el sistema simpático que actúa en situaciones de estrés, defensa y supervivencia.",
+      "grupos_quimicos": [
+        {
+          "nombre": "De acción directa",
+          "definicion": "",
+          "actividad": "",
+          "efectos_adversos": [],
+          "farmacos": [
+            {
+              "principio_activo": "Adrenalina",
+              "ef": ""
+            },
+            {
+              "principio_activo": "Noradrenalina",
+              "ef": ""
+            },
+            {
+              "principio_activo": "Salbutamol",
+              "ef": "VENTOLIN"
+            },
+            {
+              "principio_activo": "Terbutalina",
+              "ef": "TERBASMIN"
+            }
+          ]
+        },
+        {
+          "nombre": "De acción indirecta",
+          "definicion": "",
+          "actividad": "",
+          "efectos_adversos": [],
+          "farmacos": [
+            {
+              "principio_activo": "Cocaína",
+              "ef": ""
+            },
+            {
+              "principio_activo": "Efedrina",
+              "ef": ""
+            }
+          ]
+        },
+        {
+          "nombre": "De acción mixta",
+          "definicion": "",
+          "actividad": "",
+          "efectos_adversos": [],
+          "farmacos": [
+            {
+              "principio_activo": "Anfetaminas",
+              "ef": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Simpaticolíticos",
+      "definicion": "Inhiben la actividad del sistema simpático.",
+      "grupos_quimicos": [
+        {
+          "nombre": "Betabloqueantes",
+          "definicion": "",
+          "actividad": "Disminuyen la frecuencia cardiaca",
+          "efectos_adversos": [
+            "Bradicardia",
+            "Hipotensión",
+            "Bloqueos cardiacos"
+          ],
+          "farmacos": [
+            {
+              "principio_activo": "Propanolol",
+              "ef": "SUMIAL"
+            },
+            {
+              "principio_activo": "Atenolol",
+              "ef": "TENORMIN"
+            }
+          ]
+        }
+      ],
+      "indicaciones": [
+        "Hipertensión",
+        "Cardiopatía isquémica",
+        "Arritmias",
+        "Hipertiroidismo",
+        "Feocromocitoma",
+        "Palpitaciones",
+        "Glaucoma"
+      ]
+    },
+    {
+      "nombre": "Parasimpaticomiméticos",
+      "definicion": "Estimulan el sistema parasimpático que actúa en las situaciones de relax o de reposición.",
+      "grupos_quimicos": [
+        {
+          "nombre": "En algunas parálisis, insecticidas y gases nerviosos",
+          "definicion": "",
+          "actividad": "Parasimpaticomimético",
+          "efectos_adversos": [],
+          "farmacos": [
+            {
+              "principio_activo": "Acetilcolina",
+              "ef": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Parasimpaticolíticos",
+      "definicion": "Bloquean los receptores de la acetilcolina. Inhiben el sistema parasimpático. Producen midriasis, reducen las secreciones en general, evitan el mareo por movimiento, reducen el peristaltismo y el tono de la musculatura lisa.",
+      "grupos_quimicos": [
+        {
+          "nombre": "Alcaloides naturales",
+          "definicion": "",
+          "actividad": "Producen ansiedad, nerviosismo y en altas dosis alucinaciones",
+          "efectos_adversos": [
+            "Sequedad de boca y mucosas",
+            "Visión borrosa"
+          ],
+          "farmacos": [
+            {
+              "principio_activo": "Atropina",
+              "ef": ""
+            },
+            {
+              "principio_activo": "Escopolamina",
+              "ef": ""
+            }
+          ]
+        },
+        {
+          "nombre": "Alcaloides sintéticos",
+          "definicion": "",
+          "actividad": "Parasimpaticolítico",
+          "efectos_adversos": [
+            "Sequedad de boca y mucosas",
+            "Visión borrosa"
+          ],
+          "farmacos": [
+            {
+              "principio_activo": "Ipratropio",
+              "ef": "ATROVENT"
+            },
+            {
+              "principio_activo": "Biperideno",
+              "ef": "AKINETON"
+            },
+            {
+              "principio_activo": "Bromuro de tiotropio",
+              "ef": "SPIRIVA"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
