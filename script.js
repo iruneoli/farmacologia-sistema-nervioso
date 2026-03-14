@@ -422,10 +422,127 @@ function unirEfectos(lista) {
 }
 
 function actividad4() {
-  document.getElementById("contenido").innerHTML =
-    "<h2>Actividad 4: EF ↔ principio activo</h2>";
+  if (!datos || !datos.subgrupos || datos.subgrupos.length === 0) {
+    document.getElementById("contenido").innerHTML =
+      "<h2>Actividad 4: EF ↔ principio activo</h2><p>Cargando datos...</p>";
+    return;
+  }
+
+  generarPreguntaActividad4();
 }
 
+function generarPreguntaActividad4() {
+  const contenedor = document.getElementById("contenido");
+  const pares = construirParesEFPrincipio();
+
+  if (pares.length < 4) {
+    contenedor.innerHTML = `
+      <h2>Actividad 4: EF ↔ principio activo</h2>
+      <p>No hay suficientes datos con EF para generar preguntas.</p>
+    `;
+    return;
+  }
+
+  const modos = ["EF_A_PA", "PA_A_EF"];
+  const modo = modos[Math.floor(Math.random() * modos.length)];
+
+  const correcto = pares[Math.floor(Math.random() * pares.length)];
+
+  let pregunta = "";
+  let respuestaCorrecta = "";
+  let opciones = [];
+
+  if (modo === "EF_A_PA") {
+    pregunta = `¿Cuál es el principio activo de <strong>${correcto.ef}</strong>?`;
+    respuestaCorrecta = correcto.principio_activo;
+
+    const distractores = mezclarArray(
+      [...new Set(
+        pares
+          .map(p => p.principio_activo)
+          .filter(p => p && p !== respuestaCorrecta)
+      )]
+    ).slice(0, 3);
+
+    opciones = mezclarArray([respuestaCorrecta, ...distractores]);
+  }
+
+  if (modo === "PA_A_EF") {
+    pregunta = `¿Cuál es la especialidad farmacéutica (EF) de <strong>${correcto.principio_activo}</strong>?`;
+    respuestaCorrecta = correcto.ef;
+
+    const distractores = mezclarArray(
+      [...new Set(
+        pares
+          .map(p => p.ef)
+          .filter(e => e && e !== respuestaCorrecta)
+      )]
+    ).slice(0, 3);
+
+    opciones = mezclarArray([respuestaCorrecta, ...distractores]);
+  }
+
+  let botonesHTML = "";
+  opciones.forEach(opcion => {
+    const opcionSegura = opcion.replace(/"/g, '&quot;');
+    const correctaSegura = respuestaCorrecta.replace(/"/g, '&quot;');
+
+    botonesHTML += `
+      <button class="opcion-btn" onclick="comprobarActividad4(this)" data-opcion="${opcionSegura}" data-correcta="${correctaSegura}">
+        ${opcion}
+      </button>
+    `;
+  });
+
+  contenedor.innerHTML = `
+    <h2>Actividad 4: EF ↔ principio activo</h2>
+    <div class="caja-actividad">
+      <p class="definicion">${pregunta}</p>
+      <div class="opciones-grid">
+        ${botonesHTML}
+      </div>
+      <p id="resultado4"></p>
+      <button class="siguiente-btn" onclick="generarPreguntaActividad4()">Siguiente pregunta</button>
+    </div>
+  `;
+}
+
+function comprobarActividad4(boton) {
+  const opcion = boton.dataset.opcion;
+  const correcta = boton.dataset.correcta;
+  const resultado = document.getElementById("resultado4");
+
+  if (opcion === correcta) {
+    resultado.innerHTML = "✅ Correcto";
+    resultado.style.color = "green";
+  } else {
+    resultado.innerHTML = `❌ Incorrecto. La respuesta correcta es: <strong>${correcta}</strong>`;
+    resultado.style.color = "red";
+  }
+}
+
+function construirParesEFPrincipio() {
+  const pares = [];
+
+  datos.subgrupos.forEach(subgrupo => {
+    if (!subgrupo.grupos_quimicos) return;
+
+    subgrupo.grupos_quimicos.forEach(grupo => {
+      if (!grupo.farmacos) return;
+
+      grupo.farmacos.forEach(farmaco => {
+        if (farmaco.principio_activo && farmaco.ef && farmaco.ef.trim() !== "") {
+          pares.push({
+            principio_activo: farmaco.principio_activo,
+            ef: farmaco.ef
+          });
+        }
+      });
+    });
+  });
+
+  return pares;
+}
 function actividad5() {
   document.getElementById("contenido").innerHTML =
     "<h2>Actividad 5: Tipo test</h2>";
