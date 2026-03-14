@@ -305,21 +305,3 @@ Producen midriasis, reducen las secreciones en general, evitan el mareo por movi
 | Alcaloides sintéticos | Parasimpaticolítico | Ipratropio | ATROVENT | Sequedad de boca y mucosas, visión borrosa |
 | Alcaloides sintéticos | Parasimpaticolítico | Biperideno | AKINETON | Sequedad de boca y mucosas, visión borrosa |
 | Alcaloides sintéticos | Parasimpaticolítico | Bromuro de tiotropio | SPIRIVA | Sequedad de boca y mucosas, visión borrosa |
-
----
-
-# Propuesta de estructura del proyecto
-
-```text
-farmacologia-sistema-nervioso/
-│
-├── README.md
-├── index.html
-├── style.css
-├── script.js
-│
-├── data/
-│   └── farmacologia.json
-│
-└── docs/
-    └── temario_sistema_nervioso_ATC.docx
