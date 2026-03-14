@@ -14,7 +14,12 @@ fetch("data/farmacologia.json")
   });
 
 function mezclarArray(array) {
-  return [...array].sort(() => Math.random() - 0.5);
+  const copia = [...array];
+  for (let i = copia.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copia[i], copia[j]] = [copia[j], copia[i]];
+  }
+  return copia;
 }
 
 /* =========================
@@ -22,8 +27,10 @@ function mezclarArray(array) {
 ========================= */
 
 function actividad1() {
+  const contenedor = document.getElementById("contenido");
+
   if (!datos || !datos.subgrupos || datos.subgrupos.length === 0) {
-    document.getElementById("contenido").innerHTML =
+    contenedor.innerHTML =
       "<h2>Actividad 1: Definiciones de subgrupos</h2><p>Cargando datos...</p>";
     return;
   }
@@ -32,7 +39,9 @@ function actividad1() {
 }
 
 function generarPreguntaActividad1() {
+  const contenedor = document.getElementById("contenido");
   const subgrupos = datos.subgrupos;
+
   const correcta = subgrupos[Math.floor(Math.random() * subgrupos.length)];
   preguntaActual = correcta.nombre;
 
@@ -40,27 +49,26 @@ function generarPreguntaActividad1() {
     .filter(s => s.nombre !== correcta.nombre)
     .map(s => s.nombre);
 
-  const incorrectasMezcladas = mezclarArray(incorrectas).slice(0, 3);
-
   const opciones = mezclarArray([
     correcta.nombre,
-    ...incorrectasMezcladas
+    ...mezclarArray(incorrectas).slice(0, 3)
   ]);
 
   let botonesHTML = "";
+
   opciones.forEach(opcion => {
     botonesHTML += `
-      <button class="opcion-btn" onclick="comprobarActividad1('${opcion.replace(/'/g, "\\'")}')">
+      <button class="opcion-btn" onclick="comprobarActividad1(this)" data-opcion="${opcion}">
         ${opcion}
       </button>
     `;
   });
 
-  document.getElementById("contenido").innerHTML = `
+  contenedor.innerHTML = `
     <h2>Actividad 1: Definiciones de subgrupos</h2>
     <div class="caja-actividad">
       <p><strong>Definición:</strong></p>
-      <p class="definicion">${correcta.definicion}</p>
+      <p class="definicion">${correcta.definicion || "Sin definición"}</p>
       <div class="opciones-grid">
         ${botonesHTML}
       </div>
@@ -70,7 +78,8 @@ function generarPreguntaActividad1() {
   `;
 }
 
-function comprobarActividad1(respuesta) {
+function comprobarActividad1(boton) {
+  const respuesta = boton.dataset.opcion;
   const resultado = document.getElementById("resultado");
 
   if (respuesta === preguntaActual) {
@@ -87,8 +96,10 @@ function comprobarActividad1(respuesta) {
 ========================= */
 
 function actividad2() {
+  const contenedor = document.getElementById("contenido");
+
   if (!datos || !datos.subgrupos || datos.subgrupos.length === 0) {
-    document.getElementById("contenido").innerHTML =
+    contenedor.innerHTML =
       "<h2>Actividad 2: Clasificar principios activos</h2><p>Cargando datos...</p>";
     return;
   }
@@ -97,36 +108,39 @@ function actividad2() {
 }
 
 function generarPreguntaActividad2() {
+  const contenedor = document.getElementById("contenido");
   const subgrupos = datos.subgrupos;
 
-  const subgrupoElegido = subgrupos[Math.floor(Math.random() * subgrupos.length)];
+  const subgrupoElegido =
+    subgrupos[Math.floor(Math.random() * subgrupos.length)];
 
   const correctos = obtenerPrincipiosActivosDeSubgrupo(subgrupoElegido);
-  actividad2Correctos = correctos;
+  actividad2Correctos = [...correctos];
 
   const todosLosFarmacos = obtenerTodosLosPrincipiosActivos();
-
   const incorrectos = todosLosFarmacos.filter(f => !correctos.includes(f));
-  const incorrectosMezclados = mezclarArray(incorrectos).slice(0, 8);
+
+  const cantidadIncorrectos = Math.min(8, incorrectos.length);
+  const incorrectosMezclados = mezclarArray(incorrectos).slice(0, cantidadIncorrectos);
 
   const opcionesFinales = mezclarArray([...correctos, ...incorrectosMezclados]);
 
   let checkboxesHTML = "";
+
   opcionesFinales.forEach((farmaco, index) => {
     checkboxesHTML += `
-      <label class="checkbox-opcion">
-        <input type="checkbox" value="${farmaco.replace(/"/g, '&quot;')}" id="farmaco_${index}">
+      <label class="checkbox-opcion" for="farmaco_${index}">
+        <input type="checkbox" value="${farmaco}" id="farmaco_${index}">
         ${farmaco}
       </label>
     `;
   });
 
-  document.getElementById("contenido").innerHTML = `
+  contenedor.innerHTML = `
     <h2>Actividad 2: Clasificar principios activos</h2>
     <div class="caja-actividad">
       <p><strong>Subgrupo terapéutico:</strong></p>
       <p class="definicion">${subgrupoElegido.nombre}</p>
-
       <p>Marca todos los principios activos que pertenezcan a este subgrupo:</p>
 
       <div class="checkbox-grid">
@@ -142,9 +156,11 @@ function generarPreguntaActividad2() {
 }
 
 function obtenerPrincipiosActivosDeSubgrupo(subgrupo) {
-  let lista = [];
+  const lista = [];
 
-  if (!subgrupo.grupos_quimicos) return lista;
+  if (!subgrupo.grupos_quimicos) {
+    return lista;
+  }
 
   subgrupo.grupos_quimicos.forEach(grupo => {
     if (grupo.farmacos) {
@@ -156,11 +172,11 @@ function obtenerPrincipiosActivosDeSubgrupo(subgrupo) {
     }
   });
 
-  return lista;
+  return [...new Set(lista)];
 }
 
 function obtenerTodosLosPrincipiosActivos() {
-  let todos = [];
+  const todos = [];
 
   datos.subgrupos.forEach(subgrupo => {
     if (subgrupo.grupos_quimicos) {
@@ -189,22 +205,16 @@ function comprobarActividad2() {
     }
   });
 
-  const correctosOrdenados = [...actividad2Correctos].sort();
-  const seleccionadosOrdenados = [...seleccionados].sort();
-
-  const aciertoTotal =
-    JSON.stringify(correctosOrdenados) === JSON.stringify(seleccionadosOrdenados);
-
   const resultado = document.getElementById("resultado2");
 
-  if (aciertoTotal) {
+  const faltan = actividad2Correctos.filter(f => !seleccionados.includes(f));
+  const sobran = seleccionados.filter(f => !actividad2Correctos.includes(f));
+
+  if (faltan.length === 0 && sobran.length === 0) {
     resultado.innerHTML = "✅ Correcto";
     resultado.style.color = "green";
     return;
   }
-
-  const faltan = actividad2Correctos.filter(f => !seleccionados.includes(f));
-  const sobran = seleccionados.filter(f => !actividad2Correctos.includes(f));
 
   let mensaje = "❌ Incorrecto.<br>";
 
