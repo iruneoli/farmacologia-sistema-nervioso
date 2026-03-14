@@ -638,6 +638,92 @@ function comprobarActividad5(boton) {
 }
 
 function actividad6() {
-  document.getElementById("contenido").innerHTML =
-    "<h2>Actividad 6: Verdadero / Falso</h2><p>Aquí aparecerán las preguntas de verdadero o falso.</p>";
+  if (!preguntasBanco || !preguntasBanco.preguntas) {
+    document.getElementById("contenido").innerHTML =
+      "<h2>Actividad 6: Verdadero / Falso</h2><p>Cargando preguntas...</p>";
+    return;
+  }
+
+  generarPreguntaActividad6();
+}
+
+function generarPreguntaActividad6() {
+  const contenedor = document.getElementById("contenido");
+
+  const preguntasVF = preguntasBanco.preguntas.filter(
+    p => p.tipo === "vf"
+  );
+
+  if (preguntasVF.length === 0) {
+    contenedor.innerHTML = `
+      <h2>Actividad 6: Verdadero / Falso</h2>
+      <p>No hay preguntas de verdadero/falso en la base de datos.</p>
+    `;
+    return;
+  }
+
+  let disponibles = preguntasVF;
+
+  if (preguntasVF.length > 1 && ultimaPreguntaVFId !== null) {
+    disponibles = preguntasVF.filter(p => p.id !== ultimaPreguntaVFId);
+  }
+
+  const pregunta = disponibles[Math.floor(Math.random() * disponibles.length)];
+  ultimaPreguntaVFId = pregunta.id;
+
+  const correcta = pregunta.correcta;
+  const justificacion = pregunta.justificacion || "Sin justificación disponible.";
+
+  contenedor.innerHTML = `
+    <h2>Actividad 6: Verdadero / Falso</h2>
+    <div class="caja-actividad">
+      <p class="definicion">${pregunta.enunciado}</p>
+
+      <div class="opciones-grid">
+        <button class="opcion-btn"
+          onclick="comprobarActividad6(this)"
+          data-opcion="Verdadero"
+          data-correcta="${correcta}"
+          data-justificacion="${justificacion.replace(/"/g, '&quot;')}">
+          Verdadero
+        </button>
+
+        <button class="opcion-btn"
+          onclick="comprobarActividad6(this)"
+          data-opcion="Falso"
+          data-correcta="${correcta}"
+          data-justificacion="${justificacion.replace(/"/g, '&quot;')}">
+          Falso
+        </button>
+      </div>
+
+      <p id="resultado6"></p>
+
+      <button class="siguiente-btn" onclick="generarPreguntaActividad6()">
+        Siguiente pregunta
+      </button>
+    </div>
+  `;
+}
+
+function comprobarActividad6(boton) {
+  const opcion = boton.dataset.opcion;
+  const correcta = boton.dataset.correcta;
+  const justificacion = boton.dataset.justificacion;
+
+  const resultado = document.getElementById("resultado6");
+
+  if (opcion === correcta) {
+    resultado.innerHTML = `
+      ✅ Correcto<br>
+      <strong>Justificación:</strong> ${justificacion}
+    `;
+    resultado.style.color = "green";
+  } else {
+    resultado.innerHTML = `
+      ❌ Incorrecto. La respuesta correcta es: <strong>${correcta}</strong><br>
+      <strong>Justificación:</strong> ${justificacion}
+    `;
+    resultado.style.color = "red";
+  }
 }
