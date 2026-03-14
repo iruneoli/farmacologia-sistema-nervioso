@@ -14,6 +14,17 @@ fetch("data/farmacologia.json")
     console.error("Error cargando el JSON:", error);
   });
 
+fetch("data/preguntas.json")
+  .then(response => response.json())
+  .then(data => {
+    preguntasTest = data;
+    console.log("Preguntas cargadas correctamente");
+    console.log(preguntasTest);
+  })
+  .catch(error => {
+    console.error("Error cargando preguntas.json:", error);
+  });
+
 function mezclarArray(array) {
   const copia = [...array];
   for (let i = copia.length - 1; i > 0; i--) {
