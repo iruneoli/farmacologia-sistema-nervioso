@@ -1,11 +1,22 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f5f7fa;
-  color: #222;
-  text-align: center;
-  padding: 40px;
+body{
+
+font-family: Arial;
+background:#f4f6f8;
+text-align:center;
+
 }
 
-h1 {
-  margin-bottom: 10px;
+.menu{
+
+margin-top:40px;
+
+}
+
+button{
+
+padding:12px;
+margin:10px;
+font-size:16px;
+cursor:pointer;
+
 }
