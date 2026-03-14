@@ -558,8 +558,7 @@ function construirParesEFPrincipio() {
 }
 
 function actividad5() {
-
-  if (!preguntasTest || !preguntasTest.preguntas) {
+  if (!preguntasBanco || !preguntasBanco.preguntas) {
     document.getElementById("contenido").innerHTML =
       "<h2>Actividad 5: Tipo test</h2><p>Cargando preguntas...</p>";
     return;
@@ -569,25 +568,35 @@ function actividad5() {
 }
 
 function generarPreguntaActividad5() {
-
   const contenedor = document.getElementById("contenido");
 
-  const preguntasSoloTest = preguntasTest.preguntas.filter(
+  const preguntasSoloTest = preguntasBanco.preguntas.filter(
     p => p.tipo === "test"
   );
 
-  const pregunta = preguntasSoloTest[
-    Math.floor(Math.random() * preguntasSoloTest.length)
-  ];
+  if (preguntasSoloTest.length === 0) {
+    contenedor.innerHTML = `
+      <h2>Actividad 5: Tipo test</h2>
+      <p>No hay preguntas de tipo test en la base de datos.</p>
+    `;
+    return;
+  }
 
-  const correcta = pregunta.correcta;
+  let disponibles = preguntasSoloTest;
+
+  if (preguntasSoloTest.length > 1 && ultimaPreguntaTestId !== null) {
+    disponibles = preguntasSoloTest.filter(p => p.id !== ultimaPreguntaTestId);
+  }
+
+  const pregunta = disponibles[Math.floor(Math.random() * disponibles.length)];
+  ultimaPreguntaTestId = pregunta.id;
 
   const opciones = mezclarArray([...pregunta.opciones]);
+  const correcta = pregunta.correcta;
 
   let botonesHTML = "";
 
   opciones.forEach(opcion => {
-
     const opcionSegura = opcion.replace(/"/g, '&quot;');
     const correctaSegura = correcta.replace(/"/g, '&quot;');
 
@@ -603,42 +612,27 @@ function generarPreguntaActividad5() {
 
   contenedor.innerHTML = `
     <h2>Actividad 5: Tipo test</h2>
-
     <div class="caja-actividad">
-
       <p class="definicion">${pregunta.enunciado}</p>
-
       <div class="opciones-grid">
         ${botonesHTML}
       </div>
-
       <p id="resultado5"></p>
-
-      <button class="siguiente-btn" onclick="generarPreguntaActividad5()">
-        Siguiente pregunta
-      </button>
-
+      <button class="siguiente-btn" onclick="generarPreguntaActividad5()">Siguiente pregunta</button>
     </div>
   `;
 }
 
 function comprobarActividad5(boton) {
-
   const opcion = boton.dataset.opcion;
   const correcta = boton.dataset.correcta;
-
   const resultado = document.getElementById("resultado5");
 
   if (opcion === correcta) {
-
     resultado.innerHTML = "✅ Correcto";
     resultado.style.color = "green";
-
   } else {
-
-    resultado.innerHTML =
-      `❌ Incorrecto. La respuesta correcta es: <strong>${correcta}</strong>`;
-
+    resultado.innerHTML = `❌ Incorrecto. La respuesta correcta es: <strong>${correcta}</strong>`;
     resultado.style.color = "red";
   }
 }
