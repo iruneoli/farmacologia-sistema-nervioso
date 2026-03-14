@@ -546,8 +546,89 @@ function construirParesEFPrincipio() {
 }
 
 function actividad5() {
-  document.getElementById("contenido").innerHTML =
-    "<h2>Actividad 5: Tipo test</h2>";
+
+  if (!preguntasTest || !preguntasTest.preguntas) {
+    document.getElementById("contenido").innerHTML =
+      "<h2>Actividad 5: Tipo test</h2><p>Cargando preguntas...</p>";
+    return;
+  }
+
+  generarPreguntaActividad5();
+}
+
+function generarPreguntaActividad5() {
+
+  const contenedor = document.getElementById("contenido");
+
+  const preguntasSoloTest = preguntasTest.preguntas.filter(
+    p => p.tipo === "test"
+  );
+
+  const pregunta = preguntasSoloTest[
+    Math.floor(Math.random() * preguntasSoloTest.length)
+  ];
+
+  const correcta = pregunta.correcta;
+
+  const opciones = mezclarArray([...pregunta.opciones]);
+
+  let botonesHTML = "";
+
+  opciones.forEach(opcion => {
+
+    const opcionSegura = opcion.replace(/"/g, '&quot;');
+    const correctaSegura = correcta.replace(/"/g, '&quot;');
+
+    botonesHTML += `
+      <button class="opcion-btn"
+        onclick="comprobarActividad5(this)"
+        data-opcion="${opcionSegura}"
+        data-correcta="${correctaSegura}">
+        ${opcion}
+      </button>
+    `;
+  });
+
+  contenedor.innerHTML = `
+    <h2>Actividad 5: Tipo test</h2>
+
+    <div class="caja-actividad">
+
+      <p class="definicion">${pregunta.enunciado}</p>
+
+      <div class="opciones-grid">
+        ${botonesHTML}
+      </div>
+
+      <p id="resultado5"></p>
+
+      <button class="siguiente-btn" onclick="generarPreguntaActividad5()">
+        Siguiente pregunta
+      </button>
+
+    </div>
+  `;
+}
+
+function comprobarActividad5(boton) {
+
+  const opcion = boton.dataset.opcion;
+  const correcta = boton.dataset.correcta;
+
+  const resultado = document.getElementById("resultado5");
+
+  if (opcion === correcta) {
+
+    resultado.innerHTML = "✅ Correcto";
+    resultado.style.color = "green";
+
+  } else {
+
+    resultado.innerHTML =
+      `❌ Incorrecto. La respuesta correcta es: <strong>${correcta}</strong>`;
+
+    resultado.style.color = "red";
+  }
 }
 
 function actividad6() {
