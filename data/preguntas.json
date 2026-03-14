@@ -1,0 +1,770 @@
+{
+ "preguntas":[
+
+{
+"id":1,
+"tipo":"test",
+"enunciado":"¿Cuál es un efecto adverso de los betabloqueantes?",
+"opciones":["Taquicardia","Hipertensión","Bradicardia y bloqueos cardiacos","Sequedad de boca"],
+"correcta":"Bradicardia y bloqueos cardiacos"
+},
+
+{
+"id":2,
+"tipo":"test",
+"enunciado":"El principio activo del Prozac es:",
+"opciones":["Paroxetina","Fluoxetina","Amitriptilina","Imipramina"],
+"correcta":"Fluoxetina"
+},
+
+{
+"id":3,
+"tipo":"test",
+"enunciado":"Los fármacos psicoanalépticos se definen como aquellos que:",
+"opciones":["Deprimen el sistema nervioso","Aumentan la actividad del sistema nervioso","Bloquean la sensibilidad al dolor","Regulan el sistema vegetativo"],
+"correcta":"Aumentan la actividad del sistema nervioso"
+},
+
+{
+"id":4,
+"tipo":"test",
+"enunciado":"¿Qué neuroléptico se utiliza específicamente para el vértigo?",
+"opciones":["Risperidona","Sulpirida","Clorpromazina","Litio"],
+"correcta":"Sulpirida"
+},
+
+{
+"id":5,
+"tipo":"test",
+"enunciado":"El principio activo del medicamento DEPAKINE es:",
+"opciones":["Fenobarbital","Valproato sódico","Carbamacepina","L-DOPA"],
+"correcta":"Valproato sódico"
+},
+
+{
+"id":6,
+"tipo":"test",
+"enunciado":"Señala el fármaco que NO es una benzodiazepina:",
+"opciones":["Lorazepam","Zolpidem","Lormetazepam","Bromazepam"],
+"correcta":"Zolpidem"
+},
+
+{
+"id":7,
+"tipo":"test",
+"enunciado":"Señala la afirmación correcta sobre los fármacos antiparkinsonianos:",
+"opciones":[
+"Se utilizan para tratar el exceso de dopamina",
+"El biperideno corrige el déficit de dopamina",
+"La L-DOPA se utiliza para tratar enfermedades degenerativas del SNC",
+"No producen efectos sobre la rigidez muscular"
+],
+"correcta":"La L-DOPA se utiliza para tratar enfermedades degenerativas del SNC"
+},
+
+{
+"id":8,
+"tipo":"test",
+"enunciado":"El nombre comercial del Alprazolam es:",
+"opciones":["Orfidal","Trankimazin","Valium","Lexatin"],
+"correcta":"Trankimazin"
+},
+
+{
+"id":9,
+"tipo":"test",
+"enunciado":"¿Para qué trastorno se utiliza el litio (PLENUR)?",
+"opciones":["Esquizofrenia","Parkinson","Depresión bipolar","Epilepsia"],
+"correcta":"Depresión bipolar"
+},
+
+{
+"id":10,
+"tipo":"test",
+"enunciado":"¿Qué simpaticomimético de acción directa se utiliza en el asma?",
+"opciones":["Propanolol","Salbutamol","Efedrina","Atropina"],
+"correcta":"Salbutamol"
+},
+
+{
+"id":11,
+"tipo":"test",
+"enunciado":"Los betabloqueantes como el atenolol están indicados para:",
+"opciones":["Hipotensión","Hipertensión y arritmias","Asma","Inducción del sueño"],
+"correcta":"Hipertensión y arritmias"
+},
+
+{
+"id":12,
+"tipo":"test",
+"enunciado":"¿Cuál es un efecto adverso común de los parasimpaticolíticos?",
+"opciones":["Exceso de salivación","Diarrea","Sequedad de boca y visión borrosa","Bradicardia"],
+"correcta":"Sequedad de boca y visión borrosa"
+},
+
+{
+"id":13,
+"tipo":"test",
+"enunciado":"¿A qué grupo farmacológico pertenece el Diazepam?",
+"opciones":["Antidepresivos","Neurolépticos","Benzodiazepinas","Betabloqueantes"],
+"correcta":"Benzodiazepinas"
+},
+
+{
+"id":14,
+"tipo":"test",
+"enunciado":"¿Qué medicamento se utiliza como broncodilatador?",
+"opciones":["Salbutamol","Propranolol","Atropina","Haloperidol"],
+"correcta":"Salbutamol"
+},
+
+{
+"id":15,
+"tipo":"test",
+"enunciado":"¿Qué fármaco pertenece a los ISRS?",
+"opciones":["Fluoxetina","Amitriptilina","Haloperidol","Diazepam"],
+"correcta":"Fluoxetina"
+},
+
+{
+"id":16,
+"tipo":"test",
+"enunciado":"¿Qué efecto adverso es típico de los antidepresivos tricíclicos?",
+"opciones":["Sequedad de boca","Hipoglucemia","Midriasis intensa","Taquicardia refleja"],
+"correcta":"Sequedad de boca"
+},
+
+{
+"id":17,
+"tipo":"test",
+"enunciado":"¿Qué fármaco se utiliza en epilepsia?",
+"opciones":["Valproato sódico","Salbutamol","Atropina","Propanolol"],
+"correcta":"Valproato sódico"
+},
+
+{
+"id":18,
+"tipo":"test",
+"enunciado":"¿Cuál de estos es un anestésico local?",
+"opciones":["Lidocaína","Diazepam","Fluoxetina","Haloperidol"],
+"correcta":"Lidocaína"
+},
+
+{
+"id":19,
+"tipo":"test",
+"enunciado":"¿Qué fármaco pertenece a los neurolépticos?",
+"opciones":["Haloperidol","Fluoxetina","Diazepam","Valproato"],
+"correcta":"Haloperidol"
+},
+
+{
+"id":20,
+"tipo":"test",
+"enunciado":"¿Qué fármaco se utiliza en el tratamiento del Parkinson?",
+"opciones":["L-DOPA","Fluoxetina","Atropina","Diazepam"],
+"correcta":"L-DOPA"
+},
+
+{
+"id":21,
+"tipo":"test",
+"enunciado":"¿Cuál NO es un simpaticomimético?",
+"opciones":["Salbutamol","Efedrina","Atropina","Adrenalina"],
+"correcta":"Atropina"
+},
+
+{
+"id":22,
+"tipo":"test",
+"enunciado":"¿Cuál de estos fármacos es hipnótico?",
+"opciones":["Zolpidem","Salbutamol","Haloperidol","Fluoxetina"],
+"correcta":"Zolpidem"
+},
+
+{
+"id":23,
+"tipo":"test",
+"enunciado":"¿Qué medicamento pertenece a los simpaticolíticos?",
+"opciones":["Propranolol","Salbutamol","Adrenalina","Efedrina"],
+"correcta":"Propranolol"
+},
+
+{
+"id":24,
+"tipo":"test",
+"enunciado":"¿Cuál es un efecto adverso frecuente de las benzodiazepinas?",
+"opciones":["Somnolencia","Hipertensión","Taquicardia","Hipoglucemia"],
+"correcta":"Somnolencia"
+},
+
+{
+"id":25,
+"tipo":"test",
+"enunciado":"¿Qué fármaco se usa como antipsicótico?",
+"opciones":["Haloperidol","Fluoxetina","Diazepam","Valproato"],
+"correcta":"Haloperidol"
+},
+
+{
+"id":26,
+"tipo":"test",
+"enunciado":"¿Qué medicamento pertenece a los parasimpaticolíticos?",
+"opciones":["Atropina","Salbutamol","Adrenalina","Fluoxetina"],
+"correcta":"Atropina"
+},
+
+{
+"id":27,
+"tipo":"test",
+"enunciado":"¿Qué medicamento es un anticonvulsionante?",
+"opciones":["Carbamacepina","Salbutamol","Atropina","Diazepam"],
+"correcta":"Carbamacepina"
+},
+
+{
+"id":28,
+"tipo":"test",
+"enunciado":"¿Qué fármaco pertenece a los antidepresivos tricíclicos?",
+"opciones":["Amitriptilina","Fluoxetina","Diazepam","Haloperidol"],
+"correcta":"Amitriptilina"
+},
+
+{
+"id":29,
+"tipo":"test",
+"enunciado":"¿Cuál de estos es un simpaticomimético?",
+"opciones":["Adrenalina","Atropina","Propranolol","Haloperidol"],
+"correcta":"Adrenalina"
+},
+
+{
+"id":30,
+"tipo":"test",
+"enunciado":"¿Qué medicamento se usa para tratar la ansiedad?",
+"opciones":["Diazepam","Salbutamol","Fluoxetina","Atropina"],
+"correcta":"Diazepam"
+},
+
+{
+"id":31,
+"tipo":"test",
+"enunciado":"¿Qué grupo farmacológico reduce la actividad del sistema nervioso?",
+"opciones":["Psicolépticos","Psicoanalépticos","Simpaticomiméticos","Parasimpaticomiméticos"],
+"correcta":"Psicolépticos"
+},
+
+{
+"id":32,
+"tipo":"test",
+"enunciado":"¿Qué medicamento es un betabloqueante?",
+"opciones":["Propranolol","Salbutamol","Atropina","Fluoxetina"],
+"correcta":"Propranolol"
+},
+
+{
+"id":33,
+"tipo":"test",
+"enunciado":"¿Qué medicamento se usa para tratar la depresión?",
+"opciones":["Fluoxetina","Atropina","Salbutamol","Propranolol"],
+"correcta":"Fluoxetina"
+},
+
+{
+"id":34,
+"tipo":"test",
+"enunciado":"¿Qué medicamento pertenece a los anticonvulsionantes?",
+"opciones":["Valproato","Fluoxetina","Haloperidol","Atropina"],
+"correcta":"Valproato"
+},
+
+{
+"id":35,
+"tipo":"test",
+"enunciado":"¿Qué medicamento pertenece a los simpaticomiméticos?",
+"opciones":["Salbutamol","Propranolol","Atropina","Diazepam"],
+"correcta":"Salbutamol"
+},
+
+{
+"id":36,
+"tipo":"test",
+"enunciado":"¿Qué medicamento pertenece a los antipsicóticos?",
+"opciones":["Haloperidol","Fluoxetina","Diazepam","Valproato"],
+"correcta":"Haloperidol"
+},
+
+{
+"id":37,
+"tipo":"test",
+"enunciado":"¿Qué medicamento pertenece a los anestésicos locales?",
+"opciones":["Lidocaína","Diazepam","Haloperidol","Fluoxetina"],
+"correcta":"Lidocaína"
+},
+
+{
+"id":38,
+"tipo":"test",
+"enunciado":"¿Qué medicamento pertenece a los hipnóticos?",
+"opciones":["Zolpidem","Fluoxetina","Haloperidol","Atropina"],
+"correcta":"Zolpidem"
+},
+
+{
+"id":39,
+"tipo":"test",
+"enunciado":"¿Qué medicamento pertenece a los antiparkinsonianos?",
+"opciones":["L-DOPA","Fluoxetina","Atropina","Salbutamol"],
+"correcta":"L-DOPA"
+},
+
+{
+"id":40,
+"tipo":"test",
+"enunciado":"¿Qué medicamento pertenece a los simpaticolíticos?",
+"opciones":["Atenolol","Salbutamol","Adrenalina","Atropina"],
+"correcta":"Atenolol"
+},
+
+{
+"id":41,
+"tipo":"vf",
+"enunciado":"Los ISRS aumentan la actividad del sistema nervioso.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+
+{
+"id":42,
+"tipo":"vf",
+"enunciado":"Los neurolépticos potencian la acción de otros depresores como el alcohol.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+
+{
+"id":43,
+"tipo":"vf",
+"enunciado":"Los anestésicos generales se utilizan para tratar hemorroides.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Falso"
+},
+
+{
+"id":44,
+"tipo":"vf",
+"enunciado":"Los parasimpaticomiméticos aumentan la frecuencia cardiaca.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Falso"
+},
+
+{
+"id":45,
+"tipo":"vf",
+"enunciado":"Los simpaticomiméticos aumentan la presión arterial.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+
+{
+"id":46,
+"tipo":"vf",
+"enunciado":"El propranolol se utiliza para tratar la hipotensión.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Falso"
+},
+
+{
+"id":47,
+"tipo":"vf",
+"enunciado":"El haloperidol es un antidepresivo.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Falso"
+},
+
+{
+"id":48,
+"tipo":"vf",
+"enunciado":"Los hipnóticos de acción larga producen acumulación en el organismo.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+
+{
+"id":49,
+"tipo":"vf",
+"enunciado":"El diazepam pertenece a las benzodiazepinas.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+
+{
+"id":50,
+"tipo":"vf",
+"enunciado":"El zolpidem es una benzodiazepina.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Falso"
+},
+
+{
+"id":51,
+"tipo":"vf",
+"enunciado":"El salbutamol se utiliza como broncodilatador.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+
+{
+"id":52,
+"tipo":"vf",
+"enunciado":"El litio se utiliza en el trastorno bipolar.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+
+{
+"id":53,
+"tipo":"vf",
+"enunciado":"El atenolol es un simpaticomimético.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Falso"
+},
+
+{
+"id":54,
+"tipo":"vf",
+"enunciado":"La atropina es un parasimpaticolítico.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+
+{
+"id":55,
+"tipo":"vf",
+"enunciado":"Los anestésicos locales bloquean la conducción nerviosa.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+
+{
+"id":56,
+"tipo":"vf",
+"enunciado":"La lidocaína es un anestésico local.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+
+{
+"id":57,
+"tipo":"vf",
+"enunciado":"Los simpaticomiméticos reducen la frecuencia cardiaca.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Falso"
+},
+
+{
+"id":58,
+"tipo":"vf",
+"enunciado":"Los betabloqueantes reducen la frecuencia cardiaca.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+
+{
+"id":59,
+"tipo":"vf",
+"enunciado":"Los antidepresivos tricíclicos pueden producir sequedad de boca.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+
+{
+"id":60,
+"tipo":"vf",
+"enunciado":"La L-DOPA se utiliza para tratar el Parkinson.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+
+   {
+"id":61,
+"tipo":"vf",
+"enunciado":"Los simpaticomiméticos aumentan la frecuencia cardiaca.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+
+{
+"id":62,
+"tipo":"vf",
+"enunciado":"Los parasimpaticolíticos producen sequedad de boca.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+
+{
+"id":63,
+"tipo":"vf",
+"enunciado":"El haloperidol pertenece al grupo de los neurolépticos.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":64,
+"tipo":"vf",
+"enunciado":"Los antidepresivos ISRS disminuyen la actividad del sistema nervioso central.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Falso"
+},
+{
+"id":65,
+"tipo":"vf",
+"enunciado":"La lidocaína se utiliza como anestésico local.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":66,
+"tipo":"vf",
+"enunciado":"Los simpaticolíticos aumentan la presión arterial.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Falso"
+},
+{
+"id":67,
+"tipo":"vf",
+"enunciado":"Las benzodiazepinas pueden producir somnolencia como efecto adverso.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":68,
+"tipo":"vf",
+"enunciado":"El valproato sódico se utiliza en el tratamiento de la epilepsia.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":69,
+"tipo":"vf",
+"enunciado":"El salbutamol es un broncodilatador simpaticomimético.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":70,
+"tipo":"vf",
+"enunciado":"El diazepam pertenece al grupo de los antipsicóticos.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Falso"
+},
+{
+"id":71,
+"tipo":"vf",
+"enunciado":"Los betabloqueantes pueden producir bradicardia.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":72,
+"tipo":"vf",
+"enunciado":"La atropina es un parasimpaticomimético.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Falso"
+},
+{
+"id":73,
+"tipo":"vf",
+"enunciado":"Los anestésicos locales bloquean la transmisión del impulso nervioso.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":74,
+"tipo":"vf",
+"enunciado":"El propranolol es un betabloqueante.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":75,
+"tipo":"vf",
+"enunciado":"Los simpaticomiméticos pueden producir aumento de la presión arterial.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":76,
+"tipo":"vf",
+"enunciado":"Los antidepresivos tricíclicos suelen producir sequedad de boca.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":77,
+"tipo":"vf",
+"enunciado":"El haloperidol se utiliza para tratar trastornos psicóticos.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":78,
+"tipo":"vf",
+"enunciado":"El salbutamol pertenece al grupo de los simpaticolíticos.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Falso"
+},
+{
+"id":79,
+"tipo":"vf",
+"enunciado":"Las benzodiazepinas tienen efecto ansiolítico.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":80,
+"tipo":"vf",
+"enunciado":"El litio se utiliza en el tratamiento del trastorno bipolar.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":81,
+"tipo":"vf",
+"enunciado":"Los simpaticomiméticos disminuyen la frecuencia cardiaca.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Falso"
+},
+{
+"id":82,
+"tipo":"vf",
+"enunciado":"Los anestésicos generales producen pérdida de la conciencia.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":83,
+"tipo":"vf",
+"enunciado":"Los antipsicóticos se utilizan para tratar la esquizofrenia.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":84,
+"tipo":"vf",
+"enunciado":"El zolpidem es un hipnótico utilizado para tratar el insomnio.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":85,
+"tipo":"vf",
+"enunciado":"El atenolol pertenece al grupo de los simpaticolíticos.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":86,
+"tipo":"vf",
+"enunciado":"La carbamacepina se utiliza en el tratamiento de la epilepsia.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":87,
+"tipo":"vf",
+"enunciado":"Los antidepresivos ISRS pueden producir náuseas como efecto adverso.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":88,
+"tipo":"vf",
+"enunciado":"El haloperidol pertenece al grupo de los antidepresivos.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Falso"
+},
+{
+"id":89,
+"tipo":"vf",
+"enunciado":"Los simpaticolíticos reducen la actividad del sistema nervioso simpático.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":90,
+"tipo":"vf",
+"enunciado":"La lidocaína puede utilizarse para anestesia local.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":91,
+"tipo":"vf",
+"enunciado":"El salbutamol se utiliza en el tratamiento del asma.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":92,
+"tipo":"vf",
+"enunciado":"Las benzodiazepinas producen efecto sedante.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":93,
+"tipo":"vf",
+"enunciado":"El litio se utiliza para tratar la epilepsia.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Falso"
+},
+{
+"id":94,
+"tipo":"vf",
+"enunciado":"Los betabloqueantes pueden disminuir la presión arterial.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":95,
+"tipo":"vf",
+"enunciado":"El haloperidol puede producir efectos extrapiramidales.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":96,
+"tipo":"vf",
+"enunciado":"Los simpaticomiméticos estimulan el sistema nervioso simpático.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":97,
+"tipo":"vf",
+"enunciado":"La atropina disminuye la frecuencia cardiaca.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Falso"
+},
+{
+"id":98,
+"tipo":"vf",
+"enunciado":"Los anestésicos locales bloquean los canales de sodio.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":99,
+"tipo":"vf",
+"enunciado":"Los antidepresivos pueden utilizarse en trastornos de ansiedad.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+},
+{
+"id":100,
+"tipo":"vf",
+"enunciado":"El diazepam tiene efecto ansiolítico.",
+"opciones":["Verdadero","Falso"],
+"correcta":"Verdadero"
+}
