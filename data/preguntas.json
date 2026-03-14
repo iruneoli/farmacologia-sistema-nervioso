@@ -599,6 +599,291 @@
 "Biperideno"
 ],
 "correcta": "Atropina"
+},
+{
+"id": 51,
+"tipo": "test",
+"enunciado": "¿Cuál de estos fármacos es un parasimpaticolítico alcaloide sintético?",
+"opciones": [
+"Escopolamina",
+"Atropina",
+"Biperideno",
+"Acetilcolina"
+],
+"correcta": "Biperideno"
+},
+{
+"id": 52,
+"tipo": "test",
+"enunciado": "¿Cuál es un efecto adverso característico de los antidepresivos tricíclicos?",
+"opciones": [
+"Hipertensión intensa",
+"Sequedad de boca y visión borrosa",
+"Bradicardia severa",
+"Midriasis dolorosa"
+],
+"correcta": "Sequedad de boca y visión borrosa"
+},
+{
+"id": 53,
+"tipo": "test",
+"enunciado": "¿Cuál es un efecto adverso característico de los ISRS según el temario?",
+"opciones": [
+"Náuseas y vómitos",
+"Dependencia severa",
+"Sedación extrema siempre",
+"Sequedad de boca intensa"
+],
+"correcta": "Náuseas y vómitos"
+},
+{
+"id": 54,
+"tipo": "test",
+"enunciado": "¿Cuál es un efecto adverso importante del litio?",
+"opciones": [
+"Hipertensión",
+"Estrecho margen terapéutico",
+"Visión borrosa",
+"Taquicardia"
+],
+"correcta": "Estrecho margen terapéutico"
+},
+{
+"id": 55,
+"tipo": "test",
+"enunciado": "¿Qué grupo comparte riesgo de acumulación, sedación excesiva, somnolencia diurna y amnesia pasajera?",
+"opciones": [
+"Benzodiazepinas de acción corta",
+"Benzodiazepinas de acción larga",
+"Tricíclicos",
+"ISRS"
+],
+"correcta": "Benzodiazepinas de acción larga"
+},
+{
+"id": 56,
+"tipo": "test",
+"enunciado": "¿Qué grupo comparte dependencia, somnolencia diurna y amnesia pasajera?",
+"opciones": [
+"Análogos",
+"Benzodiazepinas de acción corta",
+"Benzodiazepinas de acción larga",
+"Neurolépticos"
+],
+"correcta": "Benzodiazepinas de acción corta"
+},
+{
+"id": 57,
+"tipo": "test",
+"enunciado": "¿Cuál de estos fármacos pertenece a los betabloqueantes?",
+"opciones": [
+"Atenolol",
+"Salbutamol",
+"Adrenalina",
+"Ipratropio"
+],
+"correcta": "Atenolol"
+},
+{
+"id": 58,
+"tipo": "test",
+"enunciado": "¿Qué fármaco pertenece a los antiparkinsonianos?",
+"opciones": [
+"L-DOPA",
+"Valproato sódico",
+"Fluoxetina",
+"Atropina"
+],
+"correcta": "L-DOPA"
+},
+{
+"id": 59,
+"tipo": "test",
+"enunciado": "¿Cuál de estos fármacos pertenece a los anestésicos locales?",
+"opciones": [
+"Benzocaína",
+"Diazepam",
+"Haloperidol",
+"Atenolol"
+],
+"correcta": "Benzocaína"
+},
+{
+"id": 60,
+"tipo": "test",
+"enunciado": "¿Qué fármaco pertenece a los simpaticolíticos?",
+"opciones": [
+"Adrenalina",
+"Atenolol",
+"Acetilcolina",
+"Terbutalina"
+],
+"correcta": "Atenolol"
+},
+{
+"id": 61,
+"tipo": "vf",
+"enunciado": "Los ISRS aumentan la actividad del sistema nervioso.",
+"opciones": [
+"Verdadero",
+"Falso"
+],
+"correcta": "Verdadero",
+"justificacion": "Los antidepresivos se consideran psicoanalépticos y aumentan la actividad del sistema nervioso."
+},
+{
+"id": 62,
+"tipo": "vf",
+"enunciado": "Los neurolépticos potencian la acción de otros depresores como el alcohol.",
+"opciones": [
+"Verdadero",
+"Falso"
+],
+"correcta": "Verdadero",
+"justificacion": "El temario indica que potencian la acción de otros depresores como el alcohol u opiáceos."
+},
+{
+"id": 63,
+"tipo": "vf",
+"enunciado": "Los anestésicos generales se utilizan para hemorroides y se administran en aerosol.",
+"opciones": [
+"Verdadero",
+"Falso"
+],
+"correcta": "Falso",
+"justificacion": "Los que se usan para hemorroides o dolor dental son anestésicos locales, no generales."
+},
+{
+"id": 64,
+"tipo": "vf",
+"enunciado": "Los fármacos parasimpaticomiméticos aumentan la frecuencia cardiaca y dilatan las pupilas.",
+"opciones": [
+"Verdadero",
+"Falso"
+],
+"correcta": "Falso",
+"justificacion": "Estimulan el sistema parasimpático; no se asocian a ese efecto en el temario."
+},
+{
+"id": 65,
+"tipo": "vf",
+"enunciado": "Los fármacos simpaticomiméticos contraen la pupila y aumentan la presión arterial.",
+"opciones": [
+"Verdadero",
+"Falso"
+],
+"correcta": "Falso",
+"justificacion": "El enunciado es incorrecto porque la contracción pupilar no corresponde a su acción típica."
+},
+{
+"id": 66,
+"tipo": "vf",
+"enunciado": "El propranolol y el atenolol se utilizan en casos de hipotensión y bloqueos cardiacos.",
+"opciones": [
+"Verdadero",
+"Falso"
+],
+"correcta": "Falso",
+"justificacion": "Se usan en hipertensión, cardiopatía isquémica, arritmias, hipertiroidismo, palpitaciones y glaucoma."
+},
+{
+"id": 67,
+"tipo": "vf",
+"enunciado": "El haloperidol es un antidepresivo que aumenta la actividad nerviosa.",
+"opciones": [
+"Verdadero",
+"Falso"
+],
+"correcta": "Falso",
+"justificacion": "Haloperidol es un neuroléptico, no un antidepresivo."
+},
+{
+"id": 68,
+"tipo": "vf",
+"enunciado": "Los hipnóticos de acción larga crean más dependencia que los de acción corta.",
+"opciones": [
+"Verdadero",
+"Falso"
+],
+"correcta": "Falso",
+"justificacion": "Según el temario, las benzodiazepinas de acción larga crean menos dependencia."
+},
+{
+"id": 69,
+"tipo": "vf",
+"enunciado": "El diazepam es una benzodiazepina de acción larga.",
+"opciones": [
+"Verdadero",
+"Falso"
+],
+"correcta": "Verdadero",
+"justificacion": "Aparece incluido dentro de las benzodiazepinas de acción larga."
+},
+{
+"id": 70,
+"tipo": "vf",
+"enunciado": "El zolpidem pertenece al grupo de los análogos.",
+"opciones": [
+"Verdadero",
+"Falso"
+],
+"correcta": "Verdadero",
+"justificacion": "El temario lo sitúa en el apartado de análogos dentro de hipnóticos y sedantes."
+},
+{
+"id": 71,
+"tipo": "vf",
+"enunciado": "El lorazepam es una benzodiazepina de acción corta.",
+"opciones": [
+"Verdadero",
+"Falso"
+],
+"correcta": "Verdadero",
+"justificacion": "Aparece en la lista de benzodiazepinas de acción corta."
+},
+{
+"id": 72,
+"tipo": "vf",
+"enunciado": "El bromazepam pertenece a las benzodiazepinas de acción corta.",
+"opciones": [
+"Verdadero",
+"Falso"
+],
+"correcta": "Falso",
+"justificacion": "Bromazepam aparece entre las benzodiazepinas de acción larga."
+},
+{
+"id": 73,
+"tipo": "vf",
+"enunciado": "La fluoxetina pertenece a los antidepresivos ISRS.",
+"opciones": [
+"Verdadero",
+"Falso"
+],
+"correcta": "Verdadero",
+"justificacion": "Se clasifica dentro de los afines (ISRS)."
+},
+{
+"id": 74,
+"tipo": "vf",
+"enunciado": "La amitriptilina es un antidepresivo tricíclico.",
+"opciones": [
+"Verdadero",
+"Falso"
+],
+"correcta": "Verdadero",
+"justificacion": "Figura en el grupo de los tricíclicos."
+},
+{
+"id": 75,
+"tipo": "vf",
+"enunciado": "La paroxetina es un antidepresivo tricíclico.",
+"opciones": [
+"Verdadero",
+"Falso"
+],
+"correcta": "Falso",
+"justificacion": "Paroxetina pertenece a los ISRS."
 }
 ]
 } 
