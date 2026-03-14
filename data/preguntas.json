@@ -884,6 +884,206 @@
 ],
 "correcta": "Falso",
 "justificacion": "Paroxetina pertenece a los ISRS."
+},
+{
+"id": 76,
+"tipo": "vf",
+"enunciado": "El litio se utiliza en la depresión bipolar.",
+"opciones": ["Verdadero","Falso"],
+"correcta": "Verdadero",
+"justificacion": "El temario lo indica de forma expresa."
+},
+{
+"id": 77,
+"tipo": "vf",
+"enunciado": "Los neurolépticos son psicolépticos depresores del SNC.",
+"opciones": ["Verdadero","Falso"],
+"correcta": "Verdadero",
+"justificacion": "Así se describen en el temario."
+},
+{
+"id": 78,
+"tipo": "vf",
+"enunciado": "La clorpromacina pertenece a los neurolépticos atípicos.",
+"opciones": ["Verdadero","Falso"],
+"correcta": "Falso",
+"justificacion": "Clorpromacina es un neuroléptico típico o clásico."
+},
+{
+"id": 79,
+"tipo": "vf",
+"enunciado": "La clozapina puede producir efectos secundarios sanguíneos graves.",
+"opciones": ["Verdadero","Falso"],
+"correcta": "Verdadero",
+"justificacion": "El temario destaca este efecto, sobre todo en leucocitos."
+},
+{
+"id": 80,
+"tipo": "vf",
+"enunciado": "La risperidona se utiliza para esquizofrenia y demencia.",
+"opciones": ["Verdadero","Falso"],
+"correcta": "Verdadero",
+"justificacion": "Esa indicación aparece junto a RISPERDAL."
+},
+{
+"id": 81,
+"tipo": "vf",
+"enunciado": "La benzocaína es un anestésico local.",
+"opciones": ["Verdadero","Falso"],
+"correcta": "Verdadero",
+"justificacion": "Aparece en el bloque de anestésicos locales."
+},
+{
+"id": 82,
+"tipo": "vf",
+"enunciado": "La lidocaína tiene actividad antiarrítmica.",
+"opciones": ["Verdadero","Falso"],
+"correcta": "Verdadero",
+"justificacion": "El temario lo señala explícitamente."
+},
+{
+"id": 83,
+"tipo": "vf",
+"enunciado": "La cocaína, como anestésico local, no genera dependencia.",
+"opciones": ["Verdadero","Falso"],
+"correcta": "Falso",
+"justificacion": "El temario le atribuye dependencia."
+},
+{
+"id": 84,
+"tipo": "vf",
+"enunciado": "La tetracaína se considera muy tóxica.",
+"opciones": ["Verdadero","Falso"],
+"correcta": "Verdadero",
+"justificacion": "Así aparece en los anestésicos locales."
+},
+{
+"id": 85,
+"tipo": "vf",
+"enunciado": "Los simpaticomiméticos estimulan el sistema simpático.",
+"opciones": ["Verdadero","Falso"],
+"correcta": "Verdadero",
+"justificacion": "Esa es su definición básica."
+},
+{
+"id": 86,
+"tipo": "vf",
+"enunciado": "La adrenalina es un simpaticolítico.",
+"opciones": ["Verdadero","Falso"],
+"correcta": "Falso",
+"justificacion": "Adrenalina se clasifica como simpaticomimético de acción directa."
+},
+{
+"id": 87,
+"tipo": "vf",
+"enunciado": "La efedrina es un simpaticomimético de acción indirecta.",
+"opciones": ["Verdadero","Falso"],
+"correcta": "Verdadero",
+"justificacion": "Aparece en ese grupo."
+},
+{
+"id": 88,
+"tipo": "vf",
+"enunciado": "Las anfetaminas son simpaticomiméticos de acción mixta.",
+"opciones": ["Verdadero","Falso"],
+"correcta": "Verdadero",
+"justificacion": "El temario las coloca ahí."
+},
+{
+"id": 89,
+"tipo": "vf",
+"enunciado": "Los simpaticolíticos inhiben la actividad del sistema simpático.",
+"opciones": ["Verdadero","Falso"],
+"correcta": "Verdadero",
+"justificacion": "Ese es su mecanismo general."
+},
+{
+"id": 90,
+"tipo": "vf",
+"enunciado": "Los betabloqueantes disminuyen la frecuencia cardiaca.",
+"opciones": ["Verdadero","Falso"],
+"correcta": "Verdadero",
+"justificacion": "Así se describe en el temario."
+},
+{
+"id": 91,
+"tipo": "vf",
+"enunciado": "El atenolol y el propranolol pertenecen a los betabloqueantes.",
+"opciones": ["Verdadero","Falso"],
+"correcta": "Verdadero",
+"justificacion": "Ambos aparecen en ese grupo."
+},
+{
+"id": 92,
+"tipo": "vf",
+"enunciado": "Los betabloqueantes producen bradicardia, hipotensión y bloqueos cardiacos.",
+"opciones": ["Verdadero","Falso"],
+"correcta": "Verdadero",
+"justificacion": "Son los efectos adversos compartidos del grupo."
+},
+{
+"id": 93,
+"tipo": "vf",
+"enunciado": "Los parasimpaticomiméticos bloquean la acetilcolina.",
+"opciones": ["Verdadero","Falso"],
+"correcta": "Falso",
+"justificacion": "Los que bloquean la acetilcolina son los parasimpaticolíticos."
+},
+{
+"id": 94,
+"tipo": "vf",
+"enunciado": "La acetilcolina pertenece a los parasimpaticomiméticos.",
+"opciones": ["Verdadero","Falso"],
+"correcta": "Verdadero",
+"justificacion": "Es el principio activo señalado en ese bloque."
+},
+{
+"id": 95,
+"tipo": "vf",
+"enunciado": "La atropina y la escopolamina son alcaloides naturales.",
+"opciones": ["Verdadero","Falso"],
+"correcta": "Verdadero",
+"justificacion": "Así se clasifican en el temario."
+},
+{
+"id": 96,
+"tipo": "vf",
+"enunciado": "Ipratropio, biperideno y bromuro de tiotropio son alcaloides sintéticos.",
+"opciones": ["Verdadero","Falso"],
+"correcta": "Verdadero",
+"justificacion": "Los tres figuran en ese apartado."
+},
+{
+"id": 97,
+"tipo": "vf",
+"enunciado": "Los parasimpaticolíticos producen sequedad de boca y visión borrosa.",
+"opciones": ["Verdadero","Falso"],
+"correcta": "Verdadero",
+"justificacion": "Son los efectos adversos destacados del grupo."
+},
+{
+"id": 98,
+"tipo": "vf",
+"enunciado": "Los anticonvulsionantes y antiepilépticos tratan movimientos espasmódicos por hiperactividad nerviosa.",
+"opciones": ["Verdadero","Falso"],
+"correcta": "Verdadero",
+"justificacion": "Esa es su definición en el temario."
+},
+{
+"id": 99,
+"tipo": "vf",
+"enunciado": "El valproato sódico corresponde a DEPAKINE.",
+"opciones": ["Verdadero","Falso"],
+"correcta": "Verdadero",
+"justificacion": "Se indica de forma explícita."
+},
+{
+"id": 100,
+"tipo": "vf",
+"enunciado": "El fenobarbital disminuye la concentración de otros fármacos.",
+"opciones": ["Verdadero","Falso"],
+"correcta": "Verdadero",
+"justificacion": "Ese efecto aparece en su fila."
 }
 ]
 } 
