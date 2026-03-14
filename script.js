@@ -1,4 +1,5 @@
 let datos = null;
+let preguntasTest = null;
 let preguntaActual = null;
 let actividad2Correctos = [];
 
