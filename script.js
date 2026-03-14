@@ -237,8 +237,188 @@ function comprobarActividad2() {
 ========================= */
 
 function actividad3() {
-  document.getElementById("contenido").innerHTML =
-    "<h2>Actividad 3: Subgrupo / efectos adversos</h2>";
+  if (!datos || !datos.subgrupos || datos.subgrupos.length === 0) {
+    document.getElementById("contenido").innerHTML =
+      "<h2>Actividad 3: Relaciones farmacológicas</h2><p>Cargando datos...</p>";
+    return;
+  }
+
+  generarPreguntaActividad3();
+}
+
+function generarPreguntaActividad3() {
+  const contenedor = document.getElementById("contenido");
+
+  const registros = construirRegistrosActividad3();
+
+  if (registros.length === 0) {
+    contenedor.innerHTML = `
+      <h2>Actividad 3: Relaciones farmacológicas</h2>
+      <p>No hay datos suficientes.</p>
+    `;
+    return;
+  }
+
+  const tipos = [
+    "PA_EFECTO",
+    "PA_GRUPO",
+    "PA_SUBGRUPO",
+    "EFECTO_SUBGRUPO",
+    "GRUPO_EFECTO"
+  ];
+
+  const tipo = tipos[Math.floor(Math.random() * tipos.length)];
+  const registro = registros[Math.floor(Math.random() * registros.length)];
+
+  let pregunta = "";
+  let correcta = "";
+  let opciones = [];
+
+  if (tipo === "PA_EFECTO") {
+    pregunta = `¿Qué efecto adverso puede tener ${registro.principio_activo}?`;
+    correcta = unirEfectos(registro.efectos_adversos);
+
+    const distractores = mezclarArray(
+      [...new Set(
+        registros
+          .map(r => unirEfectos(r.efectos_adversos))
+          .filter(e => e && e !== correcta)
+      )]
+    ).slice(0, 3);
+
+    opciones = mezclarArray([correcta, ...distractores]);
+  }
+
+  if (tipo === "PA_GRUPO") {
+    pregunta = `¿A qué grupo químico pertenece ${registro.principio_activo}?`;
+    correcta = registro.grupo_quimico;
+
+    const distractores = mezclarArray(
+      [...new Set(
+        registros
+          .map(r => r.grupo_quimico)
+          .filter(g => g && g !== correcta)
+      )]
+    ).slice(0, 3);
+
+    opciones = mezclarArray([correcta, ...distractores]);
+  }
+
+  if (tipo === "PA_SUBGRUPO") {
+    pregunta = `¿A qué subgrupo terapéutico pertenece ${registro.principio_activo}?`;
+    correcta = registro.subgrupo;
+
+    const distractores = mezclarArray(
+      [...new Set(
+        registros
+          .map(r => r.subgrupo)
+          .filter(s => s && s !== correcta)
+      )]
+    ).slice(0, 3);
+
+    opciones = mezclarArray([correcta, ...distractores]);
+  }
+
+  if (tipo === "EFECTO_SUBGRUPO") {
+    const conEfectos = registros.filter(r => r.efectos_adversos && r.efectos_adversos.length > 0);
+    const elegido = conEfectos[Math.floor(Math.random() * conEfectos.length)];
+
+    pregunta = `¿Qué subgrupo terapéutico se asocia con estos efectos adversos?<br><strong>${unirEfectos(elegido.efectos_adversos)}</strong>`;
+    correcta = elegido.subgrupo;
+
+    const distractores = mezclarArray(
+      [...new Set(
+        registros
+          .map(r => r.subgrupo)
+          .filter(s => s && s !== correcta)
+      )]
+    ).slice(0, 3);
+
+    opciones = mezclarArray([correcta, ...distractores]);
+  }
+
+  if (tipo === "GRUPO_EFECTO") {
+    const conEfectos = registros.filter(r => r.efectos_adversos && r.efectos_adversos.length > 0);
+    const elegido = conEfectos[Math.floor(Math.random() * conEfectos.length)];
+
+    pregunta = `¿Qué efecto adverso se asocia al grupo químico ${elegido.grupo_quimico}?`;
+    correcta = unirEfectos(elegido.efectos_adversos);
+
+    const distractores = mezclarArray(
+      [...new Set(
+        registros
+          .map(r => unirEfectos(r.efectos_adversos))
+          .filter(e => e && e !== correcta)
+      )]
+    ).slice(0, 3);
+
+    opciones = mezclarArray([correcta, ...distractores]);
+  }
+
+  let botonesHTML = "";
+  opciones.forEach(opcion => {
+    const opcionSegura = opcion.replace(/"/g, '&quot;');
+    botonesHTML += `
+      <button class="opcion-btn" onclick="comprobarActividad3(this)" data-correcta="${correcta.replace(/"/g, '&quot;')}" data-opcion="${opcionSegura}">
+        ${opcion}
+      </button>
+    `;
+  });
+
+  contenedor.innerHTML = `
+    <h2>Actividad 3: Relaciones farmacológicas</h2>
+    <div class="caja-actividad">
+      <p class="definicion">${pregunta}</p>
+      <div class="opciones-grid">
+        ${botonesHTML}
+      </div>
+      <p id="resultado3"></p>
+      <button class="siguiente-btn" onclick="generarPreguntaActividad3()">Siguiente pregunta</button>
+    </div>
+  `;
+}
+
+function comprobarActividad3(boton) {
+  const opcion = boton.dataset.opcion;
+  const correcta = boton.dataset.correcta;
+  const resultado = document.getElementById("resultado3");
+
+  if (opcion === correcta) {
+    resultado.innerHTML = "✅ Correcto";
+    resultado.style.color = "green";
+  } else {
+    resultado.innerHTML = `❌ Incorrecto. La respuesta correcta es:<br><strong>${correcta}</strong>`;
+    resultado.style.color = "red";
+  }
+}
+
+function construirRegistrosActividad3() {
+  const registros = [];
+
+  datos.subgrupos.forEach(subgrupo => {
+    if (!subgrupo.grupos_quimicos) return;
+
+    subgrupo.grupos_quimicos.forEach(grupo => {
+      if (!grupo.farmacos) return;
+
+      grupo.farmacos.forEach(farmaco => {
+        registros.push({
+          subgrupo: subgrupo.nombre || "",
+          grupo_quimico: grupo.nombre || "",
+          principio_activo: farmaco.principio_activo || "",
+          ef: farmaco.ef || "",
+          efectos_adversos: grupo.efectos_adversos || []
+        });
+      });
+    });
+  });
+
+  return registros.filter(r => r.principio_activo);
+}
+
+function unirEfectos(lista) {
+  if (!lista || lista.length === 0) return "Sin efectos adversos especificados";
+  return lista.join(", ");
 }
 
 function actividad4() {
