@@ -543,7 +543,13 @@ function construirParesEFPrincipio() {
 
   return pares;
 }
+
 function actividad5() {
   document.getElementById("contenido").innerHTML =
     "<h2>Actividad 5: Tipo test</h2>";
+}
+
+function actividad6() {
+  document.getElementById("contenido").innerHTML =
+    "<h2>Actividad 6: Verdadero / Falso</h2><p>Aquí aparecerán las preguntas de verdadero o falso.</p>";
 }
